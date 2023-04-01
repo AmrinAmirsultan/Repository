@@ -13,7 +13,7 @@ def create_data(name, age, profession):
     data_dict = {'name': name, 'age': age, 'profession': profession}
     return data_list, data_tuple, data_dict
 
-#Приведите свой пример с использованием функций Map, Filter и Reduce. Выясните отличия.
+#Напишите функцию в результате которая возвращает список, кортеж и словарь
 numbers = [1, 2, 3, 4, 5]
 def square(x):
     return x ** 2
@@ -28,6 +28,8 @@ def add(x, y):
     return x + y
 sum_of_numbers = reduce(add, numbers)
 print(sum_of_numbers)  # 15
+
+#Приведите свой пример с использованием функций Map, Filter и Reduce. Выясните отличия.
 
 #map
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
