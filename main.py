@@ -7,23 +7,12 @@ def print_count_chars(resume):
     print("Количество символов в резюме:", len(resume))
     
 #Пример функции, которая возвращает список, кортеж и словарь, созданные на основе входных параметров:
-def get_list(n):
-    my_list = []
-    for i in range(n):
-        my_list.append(i)
-    return my_list
+def create_data_structures(name, age, city):
+    my_list = [name, age, city]
+    my_tuple = (name, age, city)
+    my_dict = {"name": name, "age": age, "city": city}
+    return my_list, my_tuple, my_dict
 
-def get_tuple(n):
-    my_tuple = ()
-    for i in range(n):
-        my_tuple += (i,)
-    return my_tuple
-
-def get_dict(n):
-    my_dict = {}
-    for i in range(n):
-        my_dict[i] = str(i)
-    return my_dict
 
 #Напишите функцию в результате которая возвращает список, кортеж и словарь
 numbers = [1, 2, 3, 4, 5]
