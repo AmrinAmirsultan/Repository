@@ -62,16 +62,23 @@ print(sum)
 #Напишите функцию, принимающую в качестве параметра наименование улицы и стоимость товара и возвращающую общую сумму доставки
 
 def calculate_delivery_cost(street_name: str, product_price: float) -> float:
-    delivery_cost = 0.0
-    if "Аль-Фараби" in street_name and "Саина" in street_name and "Ташенова" in street_name and "Достык" in street_name:
+    if not isinstance(street_name, str):
+        raise TypeError("street_name должен быть строкой")
+    if not isinstance(product_price, float):
+        raise TypeError("product_price должен быть числом типа float")
+
+    if all(substring in street_name for substring in ["Аль-Фараби", "Саина", "Ташенова", "Достык"]):
         if product_price < 10000:
             delivery_cost = 500
+        else:
+            delivery_cost = 0
     else:
         if product_price < 10000:
             delivery_cost = 1000
         else:
             delivery_cost = 0
     return delivery_cost
+
 
 #Вызвать функцию внутри функции
 def compose(f, g):
